@@ -47,6 +47,7 @@ header {
     gap: 1rem;
     position: absolute;
     left: 50%;
+    top: 2rem;
     transform: translateX(-50%);
 }
 
@@ -62,12 +63,13 @@ header {
 }
 
 .logo-text {
-    text-align: left;
+    text-align: center;
+    margin-top: -0.5rem;
 }
 
 .brand-name {
     font-family: 'Georgia', serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
     font-style: italic;
     color: #333;
@@ -83,10 +85,11 @@ header {
 
 .brand-tagline {
     font-family: 'Arial', sans-serif;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     letter-spacing: 2px;
     color: #666;
     margin-top: 0.25rem;
+    text-transform: uppercase;
 }
 
 /* Right Icons */
@@ -102,6 +105,7 @@ header {
 
 /* Navigation */
 nav {
+    padding-top: 2rem;
 }
 
 nav ul {
@@ -275,6 +279,143 @@ nav ul li a.active {
     grid-template-columns: 1fr 550px;
 }
 
+/* Explore Facility Section */
+.explore-section {
+    background-color: #f7f4ef;
+    padding: 0.75rem 5rem 6rem;
+    text-align: center;
+}
+
+.explore-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 4rem;
+}
+
+.explore-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.explore-card {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+    margin: 1.5rem 0 1rem;
+    padding: 0 1.5rem;
+}
+
+.card-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    line-height: 1.6;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #f7f4ef;
+    padding: 6rem 5rem;
+}
+
+.testimonial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #5a5a6b 0%, #6b6b7b 100%);
+    border-radius: 200px 80px 150px 80px / 80px 150px 80px 200px;
+    padding: 6rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.testimonial-content {
+    color: white;
+}
+
+.testimonial-quote {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.testimonial-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.testimonial-text {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 3rem;
+}
+
+.testimonial-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-dots .dot.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-dots .dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .about-container {
@@ -285,5 +426,23 @@ nav ul li a.active {
     .about-image {
         max-width: 400px;
         margin: 0 auto;
+    }
+
+    .explore-cards {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .testimonial-container {
+        padding: 4rem 2rem;
+        border-radius: 30px;
+    }
+
+    .testimonial-quote {
+        font-size: 2rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
     }
 }
