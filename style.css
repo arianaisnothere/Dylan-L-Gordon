@@ -416,6 +416,415 @@ nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+/* Real Clients Real Results Section */
+.results-section {
+    background-color: #f7f4ef;
+    padding: 6rem 5rem;
+}
+
+.results-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.results-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.results-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.result-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.result-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.result-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.results-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.results-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.results-dots .dot.active {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.results-dots .dot:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: #333;
+    padding: 6rem 5rem;
+}
+
+.booking-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.booking-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.booking-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.booking-description {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.6)' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    padding-right: 3rem;
+}
+
+.form-group select option {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+}
+
+.photo-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px dashed rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.photo-upload-label:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.photo-upload-label svg {
+    width: 24px;
+    height: 24px;
+}
+
+.upload-text {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+}
+
+.photo-upload-input {
+    display: none;
+}
+
+.file-name-display {
+    margin-top: 0.5rem;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.send-btn {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 1rem 3rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin: 1rem auto 0;
+    width: fit-content;
+}
+
+.send-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Help Section */
+.help-section {
+    background-color: #f7f4ef;
+    padding: 6rem 5rem;
+    text-align: center;
+}
+
+.help-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.help-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.help-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.help-item {
+    text-align: center;
+}
+
+.help-label {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.help-value {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 0.25rem 0;
+}
+
+.contact-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    border-radius: 30px;
+}
+
+.contact-btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 4rem 5rem 2rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footer-logo-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #fbf6f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footer-logo-circle img {
+    width: 120px;
+    height: auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-links li:not(:has(a)) {
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+}
+
+.copyright {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: left;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .about-container {
@@ -444,5 +853,66 @@ nav ul li a.active {
 
     .testimonial-text {
         font-size: 0.95rem;
+    }
+
+    .booking-section {
+        padding: 4rem 2rem;
+    }
+
+    .booking-title {
+        font-size: 2.2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .results-section {
+        padding: 4rem 2rem;
+    }
+
+    .results-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .results-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .help-section {
+        padding: 4rem 2rem;
+    }
+
+    .help-title {
+        font-size: 2.2rem;
+    }
+
+    .help-info {
+        gap: 1.5rem;
+    }
+
+    .footer {
+        padding: 3rem 2rem 2rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-logo-circle {
+        margin: 0 auto;
+    }
+
+    .footer-middle {
+        justify-content: center;
+    }
+
+    .copyright {
+        text-align: center;
     }
 }

@@ -32,4 +32,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Uncomment to enable auto-rotation every 5 seconds
     // setInterval(autoRotate, 5000);
+
+    // Photo Upload Functionality
+    const photoUpload = document.getElementById('photo-upload');
+    const fileNameDisplay = document.querySelector('.file-name-display');
+    const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
+
+    if (photoUpload) {
+        photoUpload.addEventListener('change', function(e) {
+            const files = e.target.files;
+            const validFiles = [];
+            const oversizedFiles = [];
+
+            // Check each file size
+            Array.from(files).forEach(file => {
+                if (file.size > maxFileSize) {
+                    oversizedFiles.push(file.name);
+                } else {
+                    validFiles.push(file);
+                }
+            });
+
+            // Display results
+            if (oversizedFiles.length > 0) {
+                alert(`The following files exceed 5MB and cannot be uploaded:\n${oversizedFiles.join('\n')}\n\nPlease choose smaller files.`);
+                fileNameDisplay.textContent = '';
+                photoUpload.value = ''; // Clear the input
+            } else if (validFiles.length > 0) {
+                const fileNames = validFiles.map(file => file.name).join(', ');
+                const totalSize = validFiles.reduce((sum, file) => sum + file.size, 0);
+                const totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2);
+                fileNameDisplay.textContent = `Selected: ${fileNames} (Total: ${totalSizeMB}MB)`;
+            } else {
+                fileNameDisplay.textContent = '';
+            }
+        });
+    }
 });
