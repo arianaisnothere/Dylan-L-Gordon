@@ -214,7 +214,7 @@ nav ul li a.active {
 /* About Section */
 .about-section {
     background-color: #f7f4ef;
-    padding: 8rem 5rem;
+    padding: 4rem 5rem;
 }
 
 .about-container {
@@ -268,6 +268,8 @@ nav ul li a.active {
     transition: background-color 0.3s ease;
     letter-spacing: 0.5px;
     border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .about-btn:hover {
@@ -416,6 +418,63 @@ nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+/* Reggie's Hair Transplant Section */
+.hair-transplant-section {
+    background-color: #fff;
+    padding: 6rem 5rem;
+    text-align: center;
+}
+
+.hair-transplant-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hair-transplant-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hair-transplant-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.hair-transplant-video-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hair-transplant-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000;
+}
+
+.hair-transplant-description {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hair-transplant-description p {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
 /* Real Clients Real Results Section */
 .results-section {
     background-color: #f7f4ef;
@@ -468,6 +527,30 @@ nav ul li a.active {
     height: 280px;
     object-fit: cover;
     display: block;
+}
+
+/* Video Styles for Results Section */
+.result-video-container {
+    width: 100%;
+    padding: 0;
+}
+
+.result-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px 15px 0 0;
+    background-color: #000;
+}
+
+.result-caption {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+    margin: 0;
 }
 
 .results-dots {
@@ -855,6 +938,27 @@ nav ul li a.active {
         font-size: 0.95rem;
     }
 
+    .hair-transplant-section {
+        padding: 4rem 2rem;
+    }
+
+    .hair-transplant-title {
+        font-size: 2.2rem;
+    }
+
+    .hair-transplant-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .hair-transplant-video-wrapper {
+        border-radius: 15px;
+    }
+
+    .hair-transplant-description p {
+        font-size: 1rem;
+    }
+
     .booking-section {
         padding: 4rem 2rem;
     }
@@ -880,6 +984,15 @@ nav ul li a.active {
     .results-gallery {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .result-video {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .result-caption {
+        font-size: 0.9rem;
+        padding: 0.75rem;
     }
 
     .help-section {
