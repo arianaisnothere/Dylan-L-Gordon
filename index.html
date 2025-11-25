@@ -58,17 +58,23 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('images/hero section 1.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero section 2.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero section 3.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero section 4.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero section 5.png')"></div>
+        </div>
         <div class="hero-content">
-            <h1>Aesthetics, Anti Aging<br>and Functional<br>Medicine</h1>
-            <button class="learn-more-btn">Learn More</button>
+            <h1>Enhance Your Natural Beauty<br>with Precision and Confidence</h1>
+            <a href="#booking" class="learn-more-btn">Learn More</a>
         </div>
         <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
         </div>
     </section>
 
@@ -83,7 +89,7 @@
                 <div class="about-content">
                     <h2>Katy Gordon</h2>
                     <p class="about-subtitle">PMU ARTIST</p>
-                    <p class="about-bio">Katy Gordon is a skilled Permanent Makeup Artist specializing in enhancing natural beauty through precision and artistry. With expertise in microblading, lip blushing, and other PMU techniques, Katy creates customized looks that complement each client's unique features and lifestyle.</p>
+                    <p class="about-bio">Katy is the creative force behind Brows By Katy / KD Aesthetics. Her artistry is defined by gentle excellence — a blend of technical precision, intuitive design, and a genuine desire to make every client feel seen. She creates brows that reveal the best version of you, specializing in natural-looking microblading, powder brows, and other permanent makeup enhancements.</p>
                     <a href="#booking" class="about-btn">Learn More</a>
                 </div>
             </div>
@@ -95,7 +101,7 @@
                 <div class="about-content">
                     <h2>Dylan Gordon</h2>
                     <p class="about-subtitle">SMP SPECIALIST</p>
-                    <p class="about-bio">Dylan Gordon is a highly skilled Scalp Micropigmentation specialist dedicated to helping clients restore their confidence through innovative hair loss solutions. With meticulous attention to detail and a commitment to natural-looking results, Dylan creates customized SMP treatments that transform lives.</p>
+                    <p class="about-bio">Dylan is the founder of Dylan.SMP, a scalp micropigmentation specialist and brand-builder with a mission larger than aesthetics. His journey — marked by redemption, discipline, and purpose — fuels his passion for helping people reclaim their identity, confidence, and sense of self. From hairline reconstruction to confidence building, Dylan approaches SMP with meticulous precision and a mentor-level commitment to results.</p>
                     <a href="#booking" class="about-btn">Learn More</a>
                 </div>
                 <div class="about-image">
@@ -105,104 +111,149 @@
         </section>
     </div>
 
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery-section">
+        <div class="photo-gallery-container">
+            <h2 class="photo-gallery-title">Our Work</h2>
+
+            <div class="photo-gallery-columns">
+                <!-- PMU Photos Column -->
+                <div class="photo-gallery-column">
+                    <h3 class="photo-gallery-column-title">PMU with Katy</h3>
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="images/pmu 1.jpg" alt="PMU Work 1">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/pmu 2.jpg" alt="PMU Work 2">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/pmu 3.jpg" alt="PMU Work 3">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/pmu 4.jpg" alt="PMU Work 4">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/pmu 5.jpg" alt="PMU Work 5">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/pmu 6.jpg" alt="PMU Work 6">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMP Photos Column -->
+                <div class="photo-gallery-column">
+                    <h3 class="photo-gallery-column-title">SMP with Dylan</h3>
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="images/dylan smp.png" alt="SMP Work 1">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/dylan smp 3.jpg" alt="SMP Work 3">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/dylan smp1.png" alt="SMP Work 2">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/dylan smp 4.jpg" alt="SMP Work 4">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/smp dylan 5.jpg" alt="SMP Work 5">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/smp dylan 6.jpg" alt="SMP Work 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-grid-section">
+        <div class="testimonials-grid-container">
+            <h2 class="testimonials-grid-title">What Our Clients Say</h2>
+
+            <div class="testimonials-columns">
+                <!-- PMU Testimonials Column -->
+                <div class="testimonials-column">
+                    <h3 class="testimonials-column-title">PMU with Katy</h3>
+                    <div class="testimonial-cards">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-content">
+                                <p class="testimonial-card-text">"Katy is truly an artist! My eyebrows look so natural and I couldn't be happier with the results. She made me feel comfortable throughout the entire process."</p>
+                                <p class="testimonial-card-author">- Sarah M.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-content">
+                                <p class="testimonial-card-text">"I was nervous about getting lip blushing but Katy explained everything step by step. The results are gorgeous and so natural looking!"</p>
+                                <p class="testimonial-card-author">- Jessica R.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-content">
+                                <p class="testimonial-card-text">"Best decision I ever made! Katy's attention to detail is incredible. My brows frame my face perfectly now."</p>
+                                <p class="testimonial-card-author">- Michelle T.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMP Testimonials Column -->
+                <div class="testimonials-column">
+                    <h3 class="testimonials-column-title">SMP with Dylan</h3>
+                    <div class="testimonial-cards">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-content">
+                                <p class="testimonial-card-text">"Dylan changed my life. I've struggled with hair loss for years and now I have my confidence back. The results look completely natural."</p>
+                                <p class="testimonial-card-author">- Michael K.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-content">
+                                <p class="testimonial-card-text">"Professional, skilled, and genuinely cares about the results. Dylan took his time to make sure every detail was perfect. Highly recommend!"</p>
+                                <p class="testimonial-card-author">- David L.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-content">
+                                <p class="testimonial-card-text">"I was skeptical about SMP but Dylan's portfolio convinced me. Now I'm one of his success stories. Amazing work!"</p>
+                                <p class="testimonial-card-author">- James P.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Explore Facility Section -->
     <section id="services" class="explore-section">
         <h2 class="explore-title">Explore our facility</h2>
         <div class="explore-cards">
-            <div class="explore-card">
+            <a href="#booking" class="explore-card">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/300x250/D4C4B0/FFFFFF?text=SMP+Dylan" alt="Learn more about SMP with Dylan">
+                    <img src="images/dylan smp1.png" alt="Learn more about SMP with Dylan">
                 </div>
                 <h3 class="card-title">Learn more about SMP with Dylan</h3>
                 <p class="card-subtitle">Discover scalp micropigmentation services →</p>
-            </div>
-            <div class="explore-card">
+            </a>
+            <a href="#booking" class="explore-card">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/300x250/D4C4B0/FFFFFF?text=PMU+Katy" alt="Learn More About PMU with Katy">
+                    <img src="images/pmu 5.jpg" alt="Learn More About PMU with Katy">
                 </div>
                 <h3 class="card-title">Learn More About PMU with Katy</h3>
                 <p class="card-subtitle">Explore permanent makeup services →</p>
-            </div>
-            <div class="explore-card">
+            </a>
+            <a href="#booking" class="explore-card">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/300x250/D4C4B0/FFFFFF?text=Courses" alt="Our Courses">
+                    <img src="images/course.jpg" alt="Our Courses">
                 </div>
                 <h3 class="card-title">Our Courses</h3>
                 <p class="card-subtitle">Learn and become a professional with us →</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="testimonial-container">
-            <div class="testimonial-content">
-                <h2 class="testimonial-quote">"The best in the business"</h2>
-                <p class="testimonial-subtitle">SMP with Dylan | PMU with Katy</p>
-                <p class="testimonial-text">Barbara is truly the best in the business. She is very caring + makes you feel so comfortable. She takes her time for every procedure. I love my results. My lips and Botox look very natural. I cannot thank her enough.</p>
-            </div>
-            <div class="testimonial-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Real Clients Real Results Section -->
-    <section class="results-section">
-        <div class="results-container">
-            <h2 class="results-title">Real Clients. Real Results.</h2>
-
-            <div class="results-gallery">
-                <!-- Video Card Example -->
-                <div class="result-card">
-                    <div class="result-video-container">
-                        <video class="result-video" controls poster="">
-                            <source src="videos/result-video-1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="result-caption">Client Transformation</p>
-                    </div>
-                </div>
-
-                <!-- Image Card Example (Before/After) -->
-                <div class="result-card">
-                    <div class="result-images">
-                        <img src="https://via.placeholder.com/300x350/D4C4B0/666666?text=Before" alt="Client result before" class="result-img">
-                        <img src="https://via.placeholder.com/300x350/D4C4B0/666666?text=After" alt="Client result after" class="result-img">
-                    </div>
-                </div>
-
-                <!-- Another Video Card -->
-                <div class="result-card">
-                    <div class="result-video-container">
-                        <video class="result-video" controls poster="">
-                            <source src="videos/result-video-2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="result-caption">Client Transformation</p>
-                    </div>
-                </div>
-
-                <!-- Image Card -->
-                <div class="result-card">
-                    <div class="result-images">
-                        <img src="https://via.placeholder.com/300x350/D4C4B0/666666?text=Before" alt="Client result before" class="result-img">
-                        <img src="https://via.placeholder.com/300x350/D4C4B0/666666?text=After" alt="Client result after" class="result-img">
-                    </div>
-                </div>
-            </div>
-
-            <div class="results-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+            </a>
         </div>
     </section>
 

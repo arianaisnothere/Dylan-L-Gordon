@@ -1,37 +1,40 @@
 // JavaScript file
 
-console.log('Barbara Brandt Aesthetics - Website loaded successfully!');
+console.log('KD Aesthetics - Website loaded successfully!');
 
-// Carousel Dots Functionality
+// Hero Slideshow Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const dots = document.querySelectorAll('.dot');
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
 
+    function goToSlide(index) {
+        // Remove active class from all slides and dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and dot
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+
+        currentSlide = index;
+    }
+
+    // Click functionality for dots
     dots.forEach((dot, index) => {
         dot.addEventListener('click', function() {
-            // Remove active class from all dots
-            dots.forEach(d => d.classList.remove('active'));
-
-            // Add active class to clicked dot
-            this.classList.add('active');
-
-            // Here you can add logic to change the hero image
-            console.log(`Carousel slide ${index + 1} selected`);
+            goToSlide(index);
         });
     });
 
-    // Auto-rotate carousel (optional)
-    let currentSlide = 0;
-    const totalSlides = dots.length;
-
+    // Auto-rotate carousel every 5 seconds
     function autoRotate() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-
-        dots.forEach(d => d.classList.remove('active'));
-        dots[currentSlide].classList.add('active');
+        const nextSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(nextSlide);
     }
 
-    // Uncomment to enable auto-rotation every 5 seconds
-    // setInterval(autoRotate, 5000);
+    setInterval(autoRotate, 5000);
 
     // Photo Upload Functionality
     const photoUpload = document.getElementById('photo-upload');
