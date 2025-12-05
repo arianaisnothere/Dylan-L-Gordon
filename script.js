@@ -4,6 +4,33 @@ console.log('KD Aesthetics - Website loaded successfully!');
 
 // Hero Slideshow Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a nav link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.carousel-dots .dot');
     let currentSlide = 0;
@@ -36,38 +63,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(autoRotate, 5000);
 
-    // Photo Upload Functionality
-    const photoUpload = document.getElementById('photo-upload');
-    const fileNameDisplay = document.querySelector('.file-name-display');
-    const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
+    // Contact Form Submission to n8n
+    const N8N_WEBHOOK_URL = 'https://n8n.solar-alliance.com/webhook/9f085369-0feb-4920-afc4-fe6d523a9101'; // <-- Replace with your n8n webhook URL
 
-    if (photoUpload) {
-        photoUpload.addEventListener('change', function(e) {
-            const files = e.target.files;
-            const validFiles = [];
-            const oversizedFiles = [];
+    const bookingForm = document.querySelector('.booking-form');
 
-            // Check each file size
-            Array.from(files).forEach(file => {
-                if (file.size > maxFileSize) {
-                    oversizedFiles.push(file.name);
-                } else {
-                    validFiles.push(file);
-                }
-            });
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
 
-            // Display results
-            if (oversizedFiles.length > 0) {
-                alert(`The following files exceed 5MB and cannot be uploaded:\n${oversizedFiles.join('\n')}\n\nPlease choose smaller files.`);
-                fileNameDisplay.textContent = '';
-                photoUpload.value = ''; // Clear the input
-            } else if (validFiles.length > 0) {
-                const fileNames = validFiles.map(file => file.name).join(', ');
-                const totalSize = validFiles.reduce((sum, file) => sum + file.size, 0);
-                const totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2);
-                fileNameDisplay.textContent = `Selected: ${fileNames} (Total: ${totalSizeMB}MB)`;
-            } else {
-                fileNameDisplay.textContent = '';
+            const submitBtn = bookingForm.querySelector('.send-btn');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Gather form data
+            const formData = {
+                fullname: document.getElementById('fullname').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                submitted_at: new Date().toISOString()
+            };
+
+            try {
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // With no-cors mode, we can't read the response, but data is sent
+                alert('Thank you! Your message has been sent successfully.');
+                bookingForm.reset();
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('Sorry, there was an error sending your message. Please try calling us directly.');
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
             }
         });
     }
